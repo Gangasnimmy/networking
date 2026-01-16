@@ -1,28 +1,28 @@
-UDP Chat Application (C)
-Overview
+**UDP Chat Application (C)**
+**Overview**
 
 This project is a simple UDP-based chat application written in C.
 It consists of a server and multiple clients that can join a chat room, send messages, and leave gracefully.
 
 The server maintains a list of connected clients and broadcasts messages to all active clients.
 
-Features
+**Features**
 
-UDP-based client–server communication
+1. UDP-based client–server communication
 
-Multiple client support
+2. Multiple client support
 
-Client registration using JOIN <name>
+3. Client registration using JOIN <name>
 
-Message broadcasting using MSG <text>
+4. Message broadcasting using MSG <text>
 
-Graceful client exit using LEAVE
+5. Graceful client exit using LEAVE
 
-Server-side client tracking using IP + port
+6. Server-side client tracking using IP + port
 
-Uses select() for non-blocking I/O
+7. Uses select() for non-blocking I/O
 
-Message Protocol
+**Message Protocol**
 
 The client communicates with the server using simple text commands:
 
@@ -32,14 +32,14 @@ MSG <message> – Send a chat message
 
 LEAVE – Leave the chat
 
-Build
+**Build**
 
 Compile using gcc:
 
 gcc server.c -o server
 gcc client.c -o client
 
-Run
+**Run**
 
 Start the server first:
 
@@ -50,7 +50,7 @@ Start one or more clients in separate terminals:
 
 ./client
 
-Usage
+**Usage**
 
 Client is prompted to enter a name
 
@@ -60,7 +60,7 @@ Type messages and press Enter to send
 
 Type quit to leave the chat
 
-Notes
+**Notes**
 
 This project uses UDP, so delivery is not guaranteed.
 
